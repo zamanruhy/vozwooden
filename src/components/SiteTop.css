@@ -1,0 +1,140 @@
+$top-height: 40px;
+
+.site-top {
+  background-color: $color-black;
+  color: #ffffff;
+  font-size: 13px;
+  box-sizing: border-box;
+  line-height: 1.4;
+  @apply max-lg:hidden;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__container {
+    max-width: 1216px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: content-box;
+  }
+  &__inner {
+    height: $top-height;
+    display: flex;
+    align-items: center;
+  }
+
+  &__dd {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 18px;
+  }
+  &__dd-icon {
+    fill: $color-gray;
+    height: 16px;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+  &__dd-button {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: $top-height;
+    transition: opacity $transition;
+
+    &:hover {
+      opacity: 0.85;
+    }
+    &:focus-visible {
+      opacity: 0.85;
+    }
+  }
+  &__dd-caret {
+    flex-shrink: 0;
+    height: 8px;
+    margin-left: 8px;
+  }
+
+  &__delivery {
+    display: flex;
+    align-items: center;
+    /* margin-right: auto; */
+  }
+  &__delivery-icon {
+    fill: $color-gray;
+    height: 16px;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  &__inner {
+    flex-grow: 1;
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+  }
+  &__phone-icon {
+    fill: $color-gray;
+    height: 16px;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+  &__phone-number {
+    font-weight: 700;
+    color: inherit;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    transition: opacity $transition;
+
+    &:hover {
+      opacity: 0.85;
+    }
+    &:focus-visible {
+      opacity: 0.85;
+    }
+  }
+
+  &__work {
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+    @apply max-xl:hidden;
+  }
+  &__work-icon {
+    fill: $color-gray;
+    height: 16px;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  &__callback {
+    height: 26px;
+    background-color: #ffffff;
+    border-radius: 13px;
+    padding: 0 10px;
+    color: $color-black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color $transition;
+    margin-left: 18px;
+    text-align: center;
+    flex-shrink: 0;
+
+    &:hover {
+      background-color: $color-yellow;
+    }
+    &:focus-visible {
+      background-color: $color-yellow;
+    }
+  }
+}

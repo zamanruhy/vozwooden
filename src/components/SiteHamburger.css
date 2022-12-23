@@ -1,0 +1,63 @@
+.site-hamburger {
+  box-sizing: content-box;
+  width: 16px;
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  transition: $transition;
+  transition-property: border-color;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  @apply lg:hidden;
+
+  &:hover {
+    border-color: $color-black;
+  }
+  &:focus-visible {
+    border-color: $color-black;
+  }
+
+  &__bar {
+    display: block;
+    height: 2px;
+    width: 16px;
+    background-color: #000000;
+    transition: $transition;
+    transition-property: opacity, transform, width;
+    margin-left: auto;
+
+    &:nth-child(1) {
+      width: 12px;
+    }
+    &:nth-child(3) {
+      width: 9px;
+    }
+  }
+  &.active &__bar:nth-child(1) {
+    width: 16px;
+
+    @supports (transform: translateY(0)) {
+      transform: translateY(5px) rotate(-45deg) scaleX(1.2);
+    }
+  }
+  &.active &__bar:nth-child(2) {
+    @supports (transform: translateY(0)) {
+      opacity: 0;
+      width: 0px;
+    }
+  }
+  &.active &__bar:nth-child(3) {
+    width: 16px;
+
+    @supports (transform: translateY(0)) {
+      transform: translateY(-5px) rotate(45deg) scaleX(1.2);
+    }
+  }
+}

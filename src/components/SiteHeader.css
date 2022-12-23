@@ -1,0 +1,134 @@
+.site-header {
+  background-color: #ffffff;
+  color: $color-black;
+  font-size: 13px;
+  box-sizing: border-box;
+  line-height: 1.4;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  @media not all and (min-width: 969px) {
+    /* border-bottom: 1px solid #dadada; */
+    box-shadow: 0 1px 0 #dadada;
+  }
+
+  html:has(&),
+  body:has(&) {
+    overflow-x: clip;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    @apply max-lg:h-[48px];
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-right: 26px;
+    @apply max-lg:mx-auto;
+  }
+  &__logo-icon {
+    fill: currentColor;
+    flex-shrink: 0;
+    margin-right: 9px;
+    height: 32px;
+    @apply max-lg:h-[30px];
+  }
+  &__logo-text {
+    line-height: 1;
+    white-space: nowrap;
+  }
+  &__logo-title {
+    font-weight: 800;
+    font-size: 18px;
+
+    @media not all and (min-width: 969px) {
+      font-size: 17px;
+    }
+  }
+  &__logo-lead {
+    font-size: 11px;
+    margin-top: -1px;
+    margin-left: 1px;
+
+    @media not all and (min-width: 969px) {
+      font-size: 10.5px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    margin-left: auto;
+    @apply max-lg:hidden;
+  }
+  &__menu-item {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+    white-space: nowrap;
+    padding: 2px 0;
+    transition: color $transition;
+
+    &:hover {
+      color: #687187;
+    }
+    &:focus-visible {
+      color: #687187;
+    }
+
+    & + & {
+      margin-left: 23px;
+    }
+  }
+  &__menu-icon {
+    height: 18px;
+    fill: currentColor;
+    transition: fill $transition;
+  }
+  &__menu-item:hover &__menu-icon {
+    fill: $color-yellow;
+  }
+  &__menu-item:focus-visible &__menu-icon {
+    fill: $color-yellow;
+  }
+  &__menu-text {
+    display: block;
+    margin-left: 11px;
+  }
+
+  &__search {
+    width: 34px;
+    height: 34px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: border-color $transition;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @apply lg:hidden;
+
+    &:hover {
+      border-color: $color-black;
+    }
+    &:focus-visible {
+      border-color: $color-black;
+    }
+  }
+  &__search-icon {
+    height: 16px;
+    fill: #000000;
+  }
+}

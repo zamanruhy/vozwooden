@@ -1,0 +1,10 @@
+/* @tailwind utilities; */
+
+.site-container {
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: content-box !important;
+}

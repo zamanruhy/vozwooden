@@ -1,0 +1,13 @@
+.site-banner {
+  display: block;
+  border-radius: 4px;
+  & + & {
+    margin-top: 36px;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    border-radius: inherit;
+  }
+}
