@@ -20,6 +20,11 @@
   &:hover {
     border-color: $color-black;
   }
+  @media (hover: none) {
+    &:hover {
+      border-color: transparent;
+    }
+  }
   &:focus-visible {
     border-color: $color-black;
   }
@@ -40,20 +45,20 @@
       width: 9px;
     }
   }
-  &.active &__bar:nth-child(1) {
+  &_active &__bar:nth-child(1) {
     width: 16px;
 
     @supports (transform: translateY(0)) {
       transform: translateY(5px) rotate(-45deg) scaleX(1.2);
     }
   }
-  &.active &__bar:nth-child(2) {
+  &_active &__bar:nth-child(2) {
     @supports (transform: translateY(0)) {
       opacity: 0;
       width: 0px;
     }
   }
-  &.active &__bar:nth-child(3) {
+  &_active &__bar:nth-child(3) {
     width: 16px;
 
     @supports (transform: translateY(0)) {

@@ -1,4 +1,4 @@
-.site-mobile-menu {
+.site-bottom-menu {
   position: fixed;
   z-index: 1000;
   bottom: 0;
@@ -19,10 +19,8 @@
     color: #687187;
     flex: 1 1 0%;
     height: 40px;
-
-    @supports (padding-bottom: env(safe-area-inset-bottom)) {
-      padding-bottom: env(safe-area-inset-bottom);
-    }
+    box-sizing: content-box;
+    padding-bottom: env(safe-area-inset-bottom);
   }
   &__icon {
     height: 18px;

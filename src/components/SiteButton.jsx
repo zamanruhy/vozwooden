@@ -20,7 +20,8 @@ export default function SiteButton(props) {
       classList={{
         [props.className]: Boolean(props.className),
         [`site-button_${props.variant}`]: Boolean(props.variant),
-        [`site-button_${props.size}`]: Boolean(props.size)
+        [`site-button_${props.size}`]: Boolean(props.size),
+        'site-button_block': Boolean(props.block)
       }}
       {...rest}
     >

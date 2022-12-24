@@ -3,12 +3,12 @@ import { splitProps } from 'solid-js'
 import './SiteHamburger.css'
 
 export default function SiteHamburger(props) {
-  const [, rest] = splitProps(props, ['active', 'classList'])
+  const [, rest] = splitProps(props, ['active', 'className'])
 
   return (
     <button
       class="site-hamburger"
-      classList={{ [props.classList]: Boolean(props.classList) }}
+      classList={{ [props.className]: Boolean(props.className) }}
       type="button"
       aria-label="Переключить меню"
       {...rest}

@@ -123,6 +123,11 @@
     &:hover {
       border-color: $color-black;
     }
+    @media (hover: none) {
+      &:hover {
+        border-color: transparent;
+      }
+    }
     &:focus-visible {
       border-color: $color-black;
     }
