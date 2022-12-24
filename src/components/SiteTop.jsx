@@ -28,7 +28,7 @@ export default function SiteTop() {
 
           <div className="site-top__phone">
             <PhoneIcon className="site-top__phone-icon" />
-            <a href="tel:8(800)600-42-50" className="site-top__phone-number">
+            <a href="tel:88006004250" className="site-top__phone-number">
               8 (800) 600-42-50
             </a>
           </div>

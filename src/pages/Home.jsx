@@ -1,16 +1,16 @@
 import SiteHeader from '@/components/SiteHeader'
 import SiteBottomMenu from '@/components/SiteBottomMenu'
-import SiteNav from '@/components/SiteNav'
+// import SiteNav from '@/components/SiteNav'
 import SiteTop from '@/components/SiteTop'
-import SiteDrawer from '@/components/SiteDrawer'
+// import SiteDrawer from '@/components/SiteDrawer'
 
 export default function Home() {
   return (
     <>
       <SiteTop />
       <SiteHeader />
-      <SiteNav />
-      <SiteDrawer />
+      {/* <SiteNav /> */}
+      {/* <SiteDrawer /> */}
       <SiteBottomMenu />
       <div style={{ height: '300vh' }}>
         <img

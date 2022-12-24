@@ -9,6 +9,7 @@ import './SiteHeader.css'
 
 import SiteHamburger from './SiteHamburger'
 import SiteSearch from './SiteSearch'
+import SiteNav from './SiteNav'
 
 export default function SiteHeader() {
   return (
@@ -47,6 +48,7 @@ export default function SiteHeader() {
           </button>
         </div>
       </div>
+      <SiteNav />
     </header>
   )
 }
