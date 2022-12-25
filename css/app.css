@@ -1822,10 +1822,11 @@
       background-color: #ffcc48;
     }
 /* @tailwind utilities; */
-html,
+html {
+  overflow-x: visible;
+}
 body {
   overflow-x: hidden;
-  overflow-x: clip;
 }
 .site-container {
   max-width: 1216px;
