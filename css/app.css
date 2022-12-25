@@ -310,6 +310,7 @@
     transition-property: opacity, transform, width;
     transition-property: opacity, transform, width, -webkit-transform, -moz-transform, -o-transform;
     margin-left: auto;
+    border-radius: 4px;
   }
 
   .site-hamburger__bar:nth-child(1) {
@@ -1488,6 +1489,7 @@
     transition-property: opacity, transform, width;
     transition-property: opacity, transform, width, -webkit-transform, -moz-transform, -o-transform;
     margin-left: auto;
+    border-radius: 4px;
   }
 
   .site-nav__burger-bar:nth-child(1) {
