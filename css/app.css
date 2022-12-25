@@ -18,11 +18,6 @@
 }
   }
 
-  html:has(.site-header),
-  body:has(.site-header) {
-    overflow-x: clip;
-  }
-
   .site-header * {
     -moz-box-sizing: border-box;
          box-sizing: border-box;
@@ -733,10 +728,13 @@
        -moz-transform: translateY(10px);
         -ms-transform: translateY(10px);
          -o-transform: translateY(10px);
-            transform: translateY(10px)
-    /* max-height: calc(100vh - 98px);
+            transform: translateY(10px);
+
     overflow: auto;
-    overscroll-behavior: contain; */
+    -ms-scroll-chaining: none;
+        overscroll-behavior: contain;
+    max-height: -moz-calc(100dvh - var(--header-bottom) * 1px);
+    max-height: calc(100dvh - var(--header-bottom) * 1px)
 }
 
     .site-sub_open {
@@ -1824,7 +1822,11 @@
       background-color: #ffcc48;
     }
 /* @tailwind utilities; */
-
+html,
+body {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
 .site-container {
   max-width: 1216px;
   margin-left: auto;

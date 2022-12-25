@@ -22,6 +22,22 @@ const main = "";
   $(window).on("toggle-site-sub", function(e) {
     $hamburger.toggleClass("site-hamburger_active");
   });
+  var scheduledAnimationFrame = false;
+  function readAndUpdate() {
+    scheduledAnimationFrame = false;
+    document.documentElement.style.setProperty(
+      "--header-bottom",
+      $header[0].getBoundingClientRect().bottom
+    );
+    performance.mark("blah");
+  }
+  readAndUpdate();
+  $(window).on("scroll resize", function() {
+    if (scheduledAnimationFrame)
+      return;
+    scheduledAnimationFrame = true;
+    requestAnimationFrame(readAndUpdate);
+  });
 })();
 (function() {
   var $ = window.jQuery;
@@ -66,7 +82,7 @@ const main = "";
     $panel.show();
   }
   var prevWidth = null;
-  $(window).on("resize", function() {
+  $(window).on("resize.site-sub", function() {
     if (window.innerWidth < 969 && (prevWidth === null || prevWidth >= 969)) {
       $navLinks.off("mouseenter focus").on("click", function(e) {
         togglePanel(e);
@@ -88,7 +104,7 @@ const main = "";
       $panelBack.on("click");
     }
     prevWidth = window.innerWidth;
-  }).trigger("resize");
+  }).trigger("resize.site-sub");
   $(window).on("toggle-site-sub", function(e) {
     $sub.toggleClass("site-sub_open");
   });
