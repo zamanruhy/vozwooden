@@ -1769,14 +1769,13 @@
     }
 /* @tailwind utilities; */
 
-/* html {
-  overflow-x: visible;
-} */
+html {
+  contain: paint;
+}
 
 html,
 body {
-  overflow-x: hidden;
-  overflow-x: clip;
+  overflow: visible;
 }
 
 .site-container {
