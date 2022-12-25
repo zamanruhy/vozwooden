@@ -162,12 +162,13 @@
     }
 
   .site-header__menu-item + .site-header__menu-item {
-      margin-left: 23px;
+      margin-left: 20px;
     }
 
   .site-header__menu-icon {
-    height: 18px;
-    width: 18px;
+    /* 18px */
+    height: 24px;
+    width: 24px;
     fill: currentColor;
     color: #030a1b;
     -webkit-flex-shrink: 0;
@@ -189,7 +190,7 @@
 
   .site-header__menu-text {
     display: block;
-    margin-left: 11px;
+    margin-left: 8px;
   }
 
   .site-header__search {
@@ -1525,7 +1526,8 @@
   }
 
   .site-bottom-menu__icon {
-    height: 18px;
+    height: 24px;
+    width: 24px;
     fill: currentColor;
   }
 .site-top {
