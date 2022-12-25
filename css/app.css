@@ -238,27 +238,6 @@
     fill: #000000;
   }
 .site-hamburger {
-  -moz-box-sizing: content-box;
-       box-sizing: content-box;
-  width: 16px;
-  height: 12px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-     -moz-box-orient: vertical;
-     -moz-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-     -moz-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   background-color: #ffffff;
   border: 1px solid transparent;
   -webkit-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -296,6 +275,7 @@
 
   .site-hamburger__bars {
     overflow: visible;
+    display: block;
   }
 
   .site-hamburger__bar {
@@ -304,6 +284,12 @@
     -o-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     -moz-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition-property: opacity, width, x, -webkit-transform;
+    transition-property: opacity, width, x, -webkit-transform;
+    -o-transition-property: opacity, width, x, -o-transform;
+    -moz-transition-property: transform, opacity, width, x, -moz-transform;
+    transition-property: transform, opacity, width, x;
+    transition-property: transform, opacity, width, x, -webkit-transform, -moz-transform, -o-transform;
     -webkit-transform-origin: center;
        -moz-transform-origin: center;
         -ms-transform-origin: center;
@@ -1431,91 +1417,56 @@
     }
 
   .site-nav__burger {
-    -moz-box-sizing: content-box;
-         box-sizing: content-box;
-    width: 16px;
-    height: 12px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-       -moz-box-orient: vertical;
-       -moz-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-       -moz-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    overflow: visible;
+    display: block;
     margin-right: 8px;
   }
 
   .site-nav__burger-bar {
-    display: block;
-    height: 2px;
-    width: 16px;
-    background-color: currentColor;
+    fill: currentColor;
     -webkit-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     -o-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     -moz-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    -webkit-transition-property: opacity, width, -webkit-transform;
-    transition-property: opacity, width, -webkit-transform;
-    -o-transition-property: opacity, width, -o-transform;
-    -moz-transition-property: opacity, transform, width, -moz-transform;
-    transition-property: opacity, transform, width;
-    transition-property: opacity, transform, width, -webkit-transform, -moz-transform, -o-transform;
-    margin-left: auto;
-    border-radius: 4px;
+    -webkit-transition-property: opacity, width, x, -webkit-transform;
+    transition-property: opacity, width, x, -webkit-transform;
+    -o-transition-property: opacity, width, x, -o-transform;
+    -moz-transition-property: transform, opacity, width, x, -moz-transform;
+    transition-property: transform, opacity, width, x;
+    transition-property: transform, opacity, width, x, -webkit-transform, -moz-transform, -o-transform;
+    -webkit-transform-origin: center;
+       -moz-transform-origin: center;
+        -ms-transform-origin: center;
+         -o-transform-origin: center;
+            transform-origin: center;
+    transform-box: fill-box;
   }
 
-  .site-nav__burger-bar:nth-child(1) {
-      width: 12px;
-    }
-
-  .site-nav__burger-bar:nth-child(3) {
-      width: 9px;
-    }
-
-  .site-nav__item_active:first-child .site-nav__burger-bar:nth-child(1) {
-    width: 16px;
-  }
-
-  @supports ((-webkit-transform: translateY(0)) or (transform: translateY(0))) {
-
-  .site-nav__item_active:first-child .site-nav__burger-bar:nth-child(1) {
+  @supports (transform-box: fill-box) {
+    .site-nav__item_active:first-child .site-nav__burger-bar:nth-child(1) {
+      width: 16px;
+      x: 0;
       -webkit-transform: translateY(5px) rotate(-45deg) scaleX(0.875);
          -moz-transform: translateY(5px) rotate(-45deg) scaleX(0.875);
           -ms-transform: translateY(5px) rotate(-45deg) scaleX(0.875);
            -o-transform: translateY(5px) rotate(-45deg) scaleX(0.875);
-              transform: translateY(5px) rotate(-45deg) scaleX(0.875)
-  }
-
-  .site-nav__item_active:first-child .site-nav__burger-bar:nth-child(2) {
-      opacity: 0;
-      width: 0px
-  }
+              transform: translateY(5px) rotate(-45deg) scaleX(0.875);
     }
-
-  .site-nav__item_active:first-child .site-nav__burger-bar:nth-child(3) {
-    width: 16px;
-  }
-
-  @supports ((-webkit-transform: translateY(0)) or (transform: translateY(0))) {
-
-  .site-nav__item_active:first-child .site-nav__burger-bar:nth-child(3) {
+    .site-nav__item_active:first-child .site-nav__burger-bar:nth-child(2) {
+      opacity: 0;
+      width: 0;
+      x: 16px;
+    }
+    .site-nav__item_active:first-child .site-nav__burger-bar:nth-child(3) {
+      width: 16px;
+      x: 0;
       -webkit-transform: translateY(-5px) rotate(45deg) scaleX(0.875);
          -moz-transform: translateY(-5px) rotate(45deg) scaleX(0.875);
           -ms-transform: translateY(-5px) rotate(45deg) scaleX(0.875);
            -o-transform: translateY(-5px) rotate(45deg) scaleX(0.875);
-              transform: translateY(-5px) rotate(45deg) scaleX(0.875)
-  }
+              transform: translateY(-5px) rotate(45deg) scaleX(0.875);
     }
+  }
 .site-bottom-menu {
   position: fixed;
   z-index: 1000;
