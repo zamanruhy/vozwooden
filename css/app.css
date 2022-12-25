@@ -76,12 +76,14 @@
             flex-shrink: 0;
     margin-right: 9px;
     height: 32px;
+    width: 36px;
   }
 
   @media not all and (min-width: 969px) {
 
   .site-header__logo-icon {
     height: 30px;
+    width: 34px;
   }
 }
 
@@ -246,6 +248,7 @@
 
   .site-header__search-icon {
     height: 16px;
+    width: 16px;
     fill: #000000;
   }
 .site-hamburger {
@@ -615,6 +618,11 @@
        box-sizing: border-box;
 }
 
+  .site-button svg {
+    height: 18px;
+    width: 18px;
+  }
+
   .site-button_primary {
     background-color: #ffcc48;
   }
@@ -795,6 +803,9 @@
       -o-transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
       -moz-transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
       transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
     }
 
       .site-sub__nav-link:hover {
@@ -1595,6 +1606,7 @@
 .site-top__dd-icon {
     fill: #86909d;
     height: 16px;
+    width: 16px;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
@@ -1637,6 +1649,7 @@
         -ms-flex-negative: 0;
             flex-shrink: 0;
     height: 8px;
+    width: 11px;
     margin-left: 8px;
   }
 
@@ -1657,6 +1670,7 @@
 .site-top__delivery-icon {
     fill: #86909d;
     height: 16px;
+    width: 23px;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
@@ -1688,6 +1702,7 @@
 .site-top__phone-icon {
     fill: #86909d;
     height: 16px;
+    width: 16px;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
@@ -1737,6 +1752,7 @@
 .site-top__work-icon {
     fill: #86909d;
     height: 16px;
+    width: 16px;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
@@ -1772,12 +1788,13 @@
 /* @tailwind utilities; */
 
 html {
-  contain: paint;
+  /* contain: paint; */
 }
 
 html,
 body {
-  overflow: visible;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .site-container {
